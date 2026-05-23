@@ -34,3 +34,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+const https = require('https');
+setInterval(() => {
+  https.get('https://sohamtravel-backend-production.up.railway.app', () => {});
+}, 14 * 60 * 1000);
